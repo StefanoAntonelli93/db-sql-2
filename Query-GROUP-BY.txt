@@ -41,3 +41,14 @@ FROM
 INNER JOIN `degrees` ON `departments`.`id` = `degrees`.`department_id`
 GROUP BY
     `departments_name`
+
+    
+oppure:
+
+SELECT
+    COUNT(id) AS `num_degrees`,
+    `department_id`
+FROM
+    `degrees`
+GROUP BY
+    `department_id`
