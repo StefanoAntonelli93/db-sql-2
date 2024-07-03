@@ -23,7 +23,7 @@ GROUP BY
 3. Calcolare la media dei voti di ogni appello d'esame
 
 SELECT
-    AVG(`vote`) AS `avg_vote`,
+    ROUND(AVG(`vote`),2) AS `avg_vote`,
     `exam_id`
 FROM
     `exam_student`
@@ -42,7 +42,6 @@ INNER JOIN `degrees` ON `departments`.`id` = `degrees`.`department_id`
 GROUP BY
     `departments_name`
 
-    
 oppure:
 
 SELECT
